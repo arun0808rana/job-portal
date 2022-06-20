@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Jost&family=Varela+Round&display=swap");
+
+body{
+  /* background-color: #8794c0; */
+}
+.bg-main-color {
+  background-color: #4c51c6;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text-main-color{
+  color: #4c51c6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.secondary-color {
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text-primary-color {
+  color: #4c51c6;
 }
 
-.App-link {
-  color: #61dafb;
+.text-secondary-color {
+  color: #5d6c8f;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bg-primary-color {
+  background-color: #fff;
+}
+
+.bg-secondary-color {
+  background-color: #f4f7ff;
+}
+
+/* .bg-secondary-color{
+  background-color: #F2EFEA;
+}
+
+.bg-secondary-color{
+  background-color: #FBFBFB;
+}
+
+.bg-secondary-color{
+  background-color: #E1F2FE;
+} */
+
+.font-primary {
+  font-family: "Crimson Text";
+}
+
+.font-secondary {
+  font-family: "Jost";
+}
+
+.text-xxs{
+  font-size: 10px;
+}
+
+.pill{
+  border-radius: 100px;
+  padding: 0px 8px;
+  background: rgb(255, 207, 207);
+  font-size: 10px;
 }
