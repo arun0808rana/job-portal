@@ -60,7 +60,7 @@ export default [
     replies: 4,
     skills: "LDPE",
     location: "Opočno",
-    desc: "In hac habitasse platea dictumst.",
+    desc: "In hac habitasse platea dictumst.In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy.",
   },
   {
     name: "Apple",

@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Jost&family=Varela+Round&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Jost&family=Rubik&family=Varela+Round&display=swap');
 
 body{
-  /* background-color: #8794c0; */
+  background-color: #fff;
 }
 .bg-main-color {
-  background-color: #4c51c6;
+  background-color: #7952B3;
 }
 
 .text-main-color{
-  color: #4c51c6;
+  color: #323232;
 }
 
 .secondary-color {
@@ -16,11 +16,11 @@ body{
 }
 
 .text-primary-color {
-  color: #4c51c6;
+  color: #323232;
 }
 
 .text-secondary-color {
-  color: #5d6c8f;
+  color: #494856;
 }
 
 .bg-primary-color {
@@ -28,7 +28,7 @@ body{
 }
 
 .bg-secondary-color {
-  background-color: #f4f7ff;
+  background-color: #faf5ff8a;
 }
 
 /* .bg-secondary-color{
@@ -48,7 +48,11 @@ body{
 }
 
 .font-secondary {
-  font-family: "Jost";
+  font-family: "Rubik";
+}
+
+.font-tertiary{
+  font-family: 'Lato';
 }
 
 .text-xxs{
@@ -60,4 +64,15 @@ body{
   padding: 0px 8px;
   background: rgb(255, 207, 207);
   font-size: 10px;
+}
+
+.clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+input[type="checkbox"] { /* change "blue" browser chrome to yellow */
+  filter: invert(100%) hue-rotate(18deg) brightness(1.7);
 }

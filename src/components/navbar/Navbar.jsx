@@ -7,7 +7,7 @@ function Navbar() {
       <div className="md:flex md:items-center md:justify-between">
         <div className="flex items-center justify-between">
           <div className="text-xl font-semibold text-gray-700">
-            <a className="text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300" href="#">Brand</a>
+            <a className="text-2xl font-bold text-gray-800 transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300" href="#">B.</a>
           </div>
           {/* Mobile menu button */}
           <div className="flex md:hidden">
