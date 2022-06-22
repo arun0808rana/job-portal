@@ -16,7 +16,6 @@ import MOCK_DATA from "../../dumdumdummy/MOCK_DATA";
 
 function Home() {
   const getLogo = (name) => {
-    console.log(name + "Logo");
     switch (`${name}Logo`) {
       case "TwitterLogo":
         return TwitterLogo;
@@ -70,6 +69,7 @@ function Home() {
       {MOCK_DATA.map((job, index) => {
         return (
           <div
+          href={job.url}
             className="jobCard p-4 bg-secondary-color m-4 rounded-lg"
             key={`jobcard-${index}`}
           >
@@ -95,7 +95,7 @@ function Home() {
                 {job.location}
               </div>
             </div>
-            <span class="mt-2 mb-2 inline-flex bg-purple-100 text-purple-500 rounded h-6 px-3 justify-center items-center text-xs">
+            <span className="mt-2 mb-2 inline-flex bg-purple-100 text-purple-500 rounded h-6 px-3 justify-center items-center text-xs">
               {job.skills}
             </span>
             <div className="description font-secondary text-secondary-color my-3 clamp">
