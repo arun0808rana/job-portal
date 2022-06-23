@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import DropdownArrow from "../../assets/dropdown.svg";
 import { toTitleCase } from "../../lib";
+import useOnClickOutside from "../../hooks/useOnClickOutside";
 
 function Dropdown({
   placeholder = "",
@@ -8,7 +9,10 @@ function Dropdown({
   currentOption,
   setCurrentOption,
 }) {
+  const selectRef = useRef();
+  const mainRef = useRef();
   const [showMenu, setShowMenu] = useState(false);
+
   const openMenu = (e) => {
     if (e.target.tagName === "INPUT") {
       setShowMenu(!showMenu);
@@ -20,16 +24,17 @@ function Dropdown({
     setShowMenu(false);
   };
 
+  useOnClickOutside(mainRef, () => setShowMenu(false));
+
   return (
     <div>
-      <div className="relative inline-block ">
+      <div className="relative inline-block" ref={mainRef}>
         {/* Dropdown toggle button */}
         <div className="relative">
           <input
             onClick={openMenu}
-            onBlur={hideMenu}
             type="text"
-            value={currentOption}
+            ref={selectRef}
             placeholder={placeholder}
             className="w-full py-2 px-4 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
           />
@@ -58,7 +63,11 @@ function Dropdown({
         {!!showMenu && (
           <div
             onClick={(e) => {
-              !!(e.target.tagName === "A") && setCurrentOption(e.target.value);
+              hideMenu();
+              if (e.target.tagName === "A") {
+                selectRef.current.value = e.target.innerText;
+                setCurrentOption(e.target.value);
+              }
             }}
             className="absolute border right-0 z-20 w-56 py-2 mt-2 overflow-hidden bg-white rounded-md shadow-xl dark:bg-gray-800"
           >

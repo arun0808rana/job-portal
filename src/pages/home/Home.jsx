@@ -1,16 +1,15 @@
 import React from "react";
-import TwitchLogo from "../../assets/twitch-purple.svg";
-import FacebookLogo from "../../assets/facebook.png";
+import TwitchLogo from "../../assets/twitch.svg";
 import TwitterLogo from "../../assets/twitter.svg";
 import InstagramLogo from "../../assets/instagram.svg";
 import MicrosoftLogo from "../../assets/microsoft.svg";
-import AmazonLogo from "../../assets/amazon.svg";
-import AppleLogo from "../../assets/apple.svg";
-import SpotifyLogo from "../../assets/spotify.png";
+import DiscordLogo from "../../assets/discord.svg";
+import NetflixLogo from "../../assets/netflix.svg";
+import SpotifyLogo from "../../assets/spotify.svg";
 import GoogleLogo from "../../assets/google.svg";
 import GithubLogo from "../../assets/github.svg";
 import GitlabLogo from "../../assets/gitlab.svg";
-import YahooLogo from "../../assets/yahoo.png";
+// import YahooLogo from "../../assets/yahoo.png";
 
 import MOCK_DATA from "../../dumdumdummy/MOCK_DATA";
 
@@ -21,16 +20,16 @@ function Home() {
         return TwitterLogo;
       case "TwitchLogo":
         return TwitchLogo;
-      case "FacebookLogo":
-        return FacebookLogo;
+      // case "FacebookLogo":
+      //   return FacebookLogo;
       case "InstagramLogo":
         return InstagramLogo;
       case "MicrosoftLogo":
         return MicrosoftLogo;
-      case "AmazonLogo":
-        return AmazonLogo;
-      case "AppleLogo":
-        return AppleLogo;
+      case "DiscordLogo":
+        return DiscordLogo;
+      case "NetflixLogo":
+        return NetflixLogo;
       case "SpotifyLogo":
         return SpotifyLogo;
       case "GoogleLogo":
@@ -39,8 +38,8 @@ function Home() {
         return GithubLogo;
       case "GitlabLogo":
         return GitlabLogo;
-      case "YahooLogo":
-        return YahooLogo;
+      // case "YahooLogo":
+      //   return YahooLogo;
       default:
         return TwitchLogo;
     }
@@ -75,7 +74,7 @@ function Home() {
           >
             <div className="logo-date flex justify-between mb-4">
               <div className="company-logo">
-                <img src={getLogo(job.name)} alt="twitch" className="w-8" />
+                <img src={getLogo(job.name)} alt="twitch" className="w-10" />
               </div>
               <div className="submission-date text-xs text-secondary-color">
                 {formatdate(job.date)}

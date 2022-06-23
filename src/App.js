@@ -11,7 +11,7 @@ function App() {
     <>
       <Navbar />
       <div className="flex justify-center">
-        <Sidebar className="sidebar" />
+        <Sidebar />
         <div className="right-layout">
           <CommonBar />
           <Routes>
